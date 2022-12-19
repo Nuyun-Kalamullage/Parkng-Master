@@ -1,0 +1,110 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .overlay {
+            position: absolute;
+            display: none;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2;
+        }
+
+        .popup {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            top: 25%;
+            left: 25%;
+            text-align: center;
+            background: white;
+        }
+
+        .popup h3 {
+            font-size: 15px;
+            height: 50px;
+            line-height: 50px;
+            color: black;
+        }
+
+        .CloseIcon {
+            cursor: pointer;
+        }
+    </style>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <div onclick="CloseModal()" class="CloseIcon">&#10006;</div>
+            <h3>Popup Content</h3>
+            <div class="content">
+                <div class="container">
+                    <form>
+                        <label>Email</label>
+                        <input type="text" placeholder="Enter your Email">
+                        <label>Contact Number</label>
+                        <input type="text" placeholder="Enter your Contact Number">
+                        <label>Date</label>
+                        <input type="date"><br>
+                        <label>Time</label>
+                        <input type="time"> <label id="to">to</label><input type="time"><br>
+                    </form>
+                </div>
+                <!--Submit button-->
+                <div class="container">
+                    <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+                    <div class="popup" id="popup">
+                        <h2>Thank You! </h2>
+                        <p>Your details has been successfully submitted.</p>
+
+                        <button type="button" onclick="closePopup()">OK</button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <button onclick="OpenModal()">Show PopUp</button>
+
+    <script>
+        function OpenModal() {
+            let element = document.getElementById('overlay')
+            element.style.display = 'block'
+        }
+        function CloseModal() {
+            let element = document.getElementById('overlay')
+            element.style.display = 'none'
+        }
+
+        let popup = document.getElementById("popup");
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+        function closePopup() {
+            popup.classList.remove("open-popup");
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>

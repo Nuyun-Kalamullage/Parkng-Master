@@ -1,0 +1,72 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Skranji', cursive;
+}
+body
+{
+	background-color: #efefef;
+	font-family: 'Skranji', cursive;
+	background-image: url(images/home.jpg);
+}
+.topic{
+	width: 80%;
+	margin: 50px auto;
+}
+.contact-box
+{
+	width: 500px;
+	background-color: #ffffff;
+	display: flex;
+	box-shadow: 0 0 20px 0 #999;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border-radius: 14px;
+	position: absolute;
+}
+.contact-left{
+	flex-basis: 60%;
+	padding: 40px 60px;
+}
+.contact-right{
+	flex-basis: 60%;
+	padding: 40px;
+	background-color: #777;
+}
+h1{
+	margin-bottom: 10px;
+}
+form
+{
+	margin: 35px;
+}
+.input-field
+{
+	width: 400px;
+	height: 40px;
+	margin-top: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid #777;
+	border-radius: 14px;
+	outline: none;
+	
+}
+.textarea-field
+{
+	height: 150px;
+	padding-top: 10px;
+	
+}
+.btn
+{
+	border-radius: 20px;
+	color: #fff;
+	margin-top: 18px;
+	padding: 10px;
+	background-color: #47c35a;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+}

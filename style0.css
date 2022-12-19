@@ -1,0 +1,131 @@
+body{
+    background: grey;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+.box{
+    margin-top: 30px;
+    text-align: center;
+}
+/*This is the Book button in home page*/
+.button{
+    font-size: 1em;
+    padding: 15px 35px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    background: #403e3d;
+    border-radius: 50px;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+}
+/*Popup window 'Please fill up the form'*/
+.wrapper{
+    margin: 70px auto;
+    padding-right: 40px;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('bg3.jpg');
+    border-radius: 10px;
+    width: 35%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.wrapper h2{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    color: #333;
+}
+.wrapper .close{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.wrapper .content{
+    max-height: 30%;
+    overflow: auto;
+}
+.container{
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+/*Lables - Email, Contact No, Date, etc*/
+form label{
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+/*Input boxes*/
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 20px;
+    resize: vertical;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+input[type=date]{
+    width: 50%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+input[type=time]{
+    width: 25%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn{
+    padding: 10px 60px;
+    background: #0066ff;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#to{
+    margin-left: 10px;
+    margin-right: 20px;
+}

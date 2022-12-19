@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parking Master</title>
+    <link href="images/parking master logo green.png" rel="icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,300;0,400;0,600;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Skranji:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&family=Roboto+Mono:wght@500&family=Skranji:wght@700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .login ul {
+            list-style-type: none;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/parking master logo002png.png"></a>
+            <!-- <div class="heading1">
+        <h1>Parking Master</h1></div> -->
+            <div class="nav-links" id="navLinks">
+                <ul>
+
+                    <li><a href="about.html">Who are we</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+            </div>
+            <div class="login">
+                <ul>
+                    <li>
+                        <button class="button_slide slide_right" id="logoutBtn">Log out</button>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <section class="map">
+        <div class="heading2">
+            <!-- <div class="container">
+        <span class="welcome">welcome to</span>
+        <span class="muzile">Parking Master</span>
+    </div> -->
+            <h2 class="start">
+                <span class="end1">P</span><span class="middle1">arking Ma</span>
+                <span class="end2">P</span></span>
+            </h2>
+
+            <!-- <h2>Parking Map</h2> -->
+
+            <div class="row">
+
+                <div class="one" id="A">
+                    Slot A
+                </div>
+
+                <div class="two" id="B">
+                    Slot B
+                </div>
+
+                <div class="three" id="C">
+                    Slot C
+                </div>
+                <div class="four" id="D">
+                    Slot D
+                </div>
+            </div>
+        </div>
+
+        <div class=" Flexdiv">
+
+            <div class="radio">
+                <h4>SlotC</h4>
+                <input type="radio" id="BookedC" name="BookSlotC" value="Booked">
+                <label for="Booked">Booked</label><br>
+                <input type="radio" id="CancleC" name="BookSlotC" value="Cancle">
+                <label for="Cancle">Cancle</label><br>
+
+                <h4>SlotC Gate</h4>
+                <input type="radio" id="openC" name="GateSlotC" value="Open">
+                <label for="Open">Gate Open</label><br>
+                <input type="radio" id="CloseC" name="GateSlotC" value="Close">
+                <label for="Close">Gate Close</label><br>
+            </div>
+            <div class="radio">
+                <h4>SlotD</h4>
+                <input type="radio" id="BookedD" name="BookSlotD" value="Booked">
+                <label for="Booked">Booked</label><br>
+                <input type="radio" id="CancleD" name="BookSlotD" value="Cancle">
+                <label for="Cancle">Cancle</label><br>
+
+                <h4>SlotD Gate</h4>
+                <input type="radio" id="openD" name="GateSlotD" value="Open">
+                <label for="Open">Gate Open</label><br>
+                <input type="radio" id="CloseD" name="GateSlotD" value="Close">
+                <label for="Close">Gate Close</label><br>
+            </div>
+        </div>
+
+        <div class="parkNow">
+            <ul>
+                <li>
+                    <a href="#divOne" class="button">
+                        <button class="button_slide slide_diagonal">Book Now!</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <body>
+            <div class="overlay" id="divOne">
+                <div class="wrapper">
+                    <h2>Please fill up the form</h2>
+                    <a href="#" class="close">&times;</a>
+                    <div class="content">
+                        <div class="container">
+                            <form>
+                                <label>Slot Number</label>
+                                <input type="radio" id="BookedC" name="BookSlot" value="slotC">
+                                <label for="slotC">Slot C</label>
+                                <input type="radio" id="BookedD" name="BookSlot" value="slotD">
+                                <label for="slotD">Slot D</label><br>
+                                <label>Email</label>
+                                <input type="text" id="email" placeholder="Enter your Email">
+                                <label>Contact Number</label>
+                                <input type="text" placeholder="Enter your Contact Number">
+                                <label>Date</label>
+                                <input type="date"><br>
+                                <label>Time</label>
+                                <input type="time"> <label id="to">to</label><input type="time"><br>
+                            </form>
+                        </div>
+                        <!--Submit button-->
+                        <div class="container">
+                            <button type="submit" class="btn" onclick="openPopup()">Submit</button>
+                            <div class="popup" id="popup">
+                                <h2>Thank You! </h2>
+                                <p>Your details has been successfully submitted.</p>
+                                <button type="button" onclick="closePopup()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function doForm() {
+                    //var slotC, slotD;
+                    document.getElementById("email").value
+                    if (document.getElementsByName("BookSlot")[0].checked) {
+                        document.getElementById("slotC").textContent = true;
+                        document.getElementById("slotD").textContent = false;
+                    } else {
+                        document.getElementById("slotC").textContent = false;
+                        document.getElementById("slotD").textContent = true;
+                    }
+                }
+
+                let popup = document.getElementById("popup");
+
+                function openPopup() {
+                    popup.classList.add("open-popup");
+                }
+                function closePopup() {
+                    popup.classList.remove("open-popup");
+                }
+            </script>
+        </body>
+    </section>
+
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js';
+        import { getAuth, GoogleAuthProvider, setPersistence, browserSessionPersistence, signInWithPopup, onAuthStateChanged, signOut } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js';
+        // TODO: Replace the following with your app's Firebase project configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD4ZxtoaAPJQfyflckIrwAQJQ5g1IooZvE",
+            authDomain: "raspberrypi-e4119.firebaseapp.com",
+            databaseURL: "https://raspberrypi-e4119-default-rtdb.firebaseio.com",
+            projectId: "raspberrypi-e4119",
+            storageBucket: "raspberrypi-e4119.appspot.com",
+            messagingSenderId: "943892121212",
+            appId: "1:943892121212:web:73b7c0e2692f4f0b412bf9",
+            measurementId: "G-FS6467GYHW"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const firebaseAuth = getAuth(app);
+        const firebaseProvider = new GoogleAuthProvider();
+        //document.getElementById('loginBtn').addEventListener('click', GoogleLogin)
+        document.getElementById('logoutBtn').addEventListener('click', (e)=>{
+            signOut(firebaseAuth).then(()=>{
+                alert("Sign Out Sucessfull");
+                window.location.replace("./index.html");
+            }).catch((error)=>{
+
+            })
+        })
+        //login with google auth
+        function GoogleLogin() {
+            console.log('Login Btn call')
+            setPersistence(firebaseAuth, browserSessionPersistence).then(() => {
+                return signInWithPopup(firebaseAuth, firebaseProvider).then(res => {
+                    console.log(res)
+                }).catch(e => {
+                    console.log(e)
+                });
+            });
+        }
+        //check user is log in or not.
+        function checkuserstate() {
+            onAuthStateChanged(firebaseAuth, (user) => {
+                if (user) {
+                    //setSiteRedirect(user);
+                    const uniqueId = user.uid;
+                }
+            });
+        }
+
+
+        // function setSiteRedirect(user) {
+        //     // console.log('Login Sucessful!')
+        //     window.location.replace("./index.html");
+        // }
+
+        checkuserstate();
+
+        var div1 = document.getElementById("A");
+        var div2 = document.getElementById("B");
+        var div3 = document.getElementById("C");
+        var div4 = document.getElementById("D");
+        const booekedCBtn = document.getElementById('BookedC');
+        const booekedDBtn = document.getElementById('BookedD');
+        const cancleCBtn = document.getElementById('CancleC');
+        const cancledDBtn = document.getElementById('CancleD');
+        const GOpenCBtn = document.getElementById('openC');
+        const GOpenDBtn = document.getElementById('openD');
+        const GCloseCBtn = document.getElementById('CloseC');
+        const GCloseDBtn = document.getElementById('CloseD');
+
+        function loadBookSlots(book) {
+            if (book["slot C"])
+                booekedCBtn.checked = true;
+            else
+                cancleCBtn.checked = true;
+            if (book["slot D"])
+                booekedDBtn.checked = true;
+            else
+                cancledDBtn.checked = true;
+        }
+
+        function loadGateSlots(gate) {
+            if (gate["C Gate"])
+                GOpenCBtn.checked = true;
+            else
+                GCloseCBtn.checked = true;
+            if (gate["D Gate"])
+                GOpenDBtn.checked = true;
+            else
+                GCloseDBtn.checked = true;
+        }
+
+        function AddParkingSlots(slots) {
+            if (slots["slot A"] && document.getElementById("imageId1") == null) {
+                var img = document.createElement("IMG");
+                img.src = "./images/car.png";
+                img.setAttribute('id', "imageId1");
+                // img.setAttribute("style", " padding-top: 25px");
+                div1.appendChild(img);
+                div1.setAttribute("style", "text-align:center");
+                //div1.textContent = "";
+            } else if (document.getElementById("imageId1") != null && !slots["slot A"]) {
+                var ImgID = document.getElementById("imageId1");
+                ImgID.parentNode.removeChild(ImgID);
+            }
+
+
+            if (slots["slot B"] && document.getElementById("imageId2") == null) {
+                var img = document.createElement("IMG");
+                img.src = "./images/car.png";
+                img.setAttribute('id', "imageId2");
+                div2.appendChild(img);
+
+            } else if (document.getElementById("imageId2") != null && !slots["slot B"]) {
+                var ImgID = document.getElementById("imageId2");
+                ImgID.parentNode.removeChild(ImgID);
+            }
+
+
+            if (slots["slot C"] && document.getElementById("imageId3") == null) {
+                var img = document.createElement("IMG");
+                img.src = "./images/car.png";
+                img.setAttribute('id', "imageId3");
+                div3.appendChild(img);
+
+            } else if (document.getElementById("imageId3") != null && !slots["slot C"]) {
+                var ImgID = document.getElementById("imageId3");
+                ImgID.parentNode.removeChild(ImgID);
+            }
+
+
+            if (slots["slot D"] && document.getElementById("imageId4") == null) {
+                var img = document.createElement("IMG");
+                img.src = "./images/car.png";
+                img.setAttribute('id', "imageId4");
+                div4.appendChild(img);
+
+            } else if (document.getElementById("imageId4") != null && !slots["slot D"]) {
+                var ImgID = document.getElementById("imageId4");
+                ImgID.parentNode.removeChild(ImgID);
+            }
+
+
+
+        }
+
+        //get data from firebase. 
+        import { getFirestore, doc, getDoc, setDoc, addDoc, updateDoc, deleteDoc, deleteField, getDocs, onSnapshot, collection } from 'https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js';
+
+        const db = getFirestore();
+
+        const radioC = document.getElementsByName('BookSlotC');
+        const radioD = document.getElementsByName('BookSlotD');
+        const radioCG = document.getElementsByName('GateSlotC');
+        const radioDG = document.getElementsByName('GateSlotD');
+        var slotcBooked, slotdBooked;
+        var slotcGate, slotdGate;
+        async function UpdateBookedData() {
+            
+            if (radioC[0].checked) {
+                slotcBooked = true;
+                slotcGate = false;
+
+            } else {
+                slotcBooked = false;
+                slotcGate = true;
+            }
+            if (radioD[0].checked) {
+                slotdBooked = true;
+                slotdGate = false;
+            } else {
+                slotdBooked = false;
+                slotdGate = true;
+            }
+            console.log(radioC[0].checked);
+            console.log(radioD[0].checked);
+            var ref = doc(db, "Parking Master", "Premium Book");
+            await updateDoc(ref, {
+                "slot C": slotcBooked,
+                "slot D": slotdBooked
+            }).then(() => {
+                // alert("data Updated sucessfull");
+            }).catch((error) => {
+                alert("unsucessful Operation, error:" + error);
+            });
+            var ref1 = doc(db, "Parking Master", "Premium Gate");
+            await updateDoc(ref1, {
+                "C Gate": slotcGate,
+                "D Gate": slotdGate
+            }).then(() => {
+                // alert("data Updated sucessfull");
+            }).catch((error) => {
+                alert("unsucessful Operation, error:" + error);
+            });
+        }
+
+        async function UpdateGateData() {
+
+            
+            if (radioCG[0].checked) {
+                slotcGate = true;
+            } else {
+                slotcGate = false;
+            }
+            if (radioDG[0].checked) {
+                slotdGate = true;
+            } else {
+                slotdGate = false;
+            }
+            console.log(radioCG[0].checked);
+            console.log(radioDG[0].checked);
+            var ref1 = doc(db, "Parking Master", "Premium Gate");
+            await updateDoc(ref1, {
+                "C Gate": slotcGate,
+                "D Gate": slotdGate
+            }).then(() => {
+                // alert("data Updated sucessfull");
+            }).catch((error) => {
+                alert("unsucessful Operation, error:" + error);
+            });
+        }
+
+        async function GetAllDataOnce() {
+            const querySnapshot = await getDocs(collection(db, "Parking Master"));
+            var parkingSlots = [];
+            querySnapshot.forEach(doc => {
+                parkingSlots.push(doc.data());
+            });
+            console.log(parkingSlots[2]);
+            loadBookSlots(parkingSlots[1]);
+            loadGateSlots(parkingSlots[2]);
+        }
+
+        async function GetAllDataRealTime() {
+            const dbRefernce = collection(db, "Parking Master");
+
+            onSnapshot(dbRefernce, (querySnapshot) => {
+                var parkingSlots = [];
+                querySnapshot.forEach(doc => {
+                    parkingSlots.push(doc.data());
+                });
+                console.log(parkingSlots[0]);
+                AddParkingSlots(parkingSlots[0]);
+                loadGateSlots(parkingSlots[2]);
+            })
+
+        }
+
+        radioC[0].addEventListener("change", UpdateBookedData);
+        radioC[1].addEventListener("change", UpdateBookedData);
+        radioD[0].addEventListener("change", UpdateBookedData);
+        radioD[1].addEventListener("change", UpdateBookedData);
+        radioCG[0].addEventListener("change", UpdateGateData);
+        radioCG[1].addEventListener("change", UpdateGateData);
+        radioDG[0].addEventListener("change", UpdateGateData);
+        radioDG[1].addEventListener("change", UpdateGateData);
+        GetAllDataOnce();
+        window.onload = GetAllDataRealTime;
+
+    </script>
+
+
+
+
+    <!--Section 7: Footer-->
+    <div style="display: none" id="slotC">slotC Booked</div>
+    <div style="display: none" id="slotD">slotD Booked</div>
+    <div style="display: none" id="cGate">slotC Gate</div>
+    <div style="display: none" id="cGate">slotD Gate</div>
+
+
+    <footer class="footer">
+        <div class="container5">
+            <div class="row6">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="aboutUs.html">about us</a></li>
+                        <li><a href="services.html">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
